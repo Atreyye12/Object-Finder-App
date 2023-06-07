@@ -1,36 +1,620 @@
+<!DOCTYPE html>
+
 <html>
+  <head>
+	
+	<title>Atreyye Thakur</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<head>
+	<!-- STYLESHEETS -->
 
-    <title>Object Finder Web App</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style/bootstrap.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="style/all.min.css" type="text/css" media="all">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+	<link rel="stylesheet" href="style/slick.css" type="text/css" media="all">
 
-    <script src=" https://unpkg.com/ml5@latest/dist/ml5.min.js "></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="style/animate.css" type="text/css" media="all">
+
+	<link rel="stylesheet" href="style/style.css" type="text/css" media="all">
+
+
+<style type="text/css">
+============================================================================================ */
+
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 400;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 500;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 500;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-MediumItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 700;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BoldItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 900;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Black.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 900;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BlackItalic.woff2') format('woff2');
+}</style>
 </head>
 
-<body background="background.jpg">
-    <center>
-        <h1 class="btn btn-warning heading"> Object Finder Web App </h1>
-        <br><br>
-        <span class="btn btn-warning"> How to use the app: The input name you give must match with the name given in the
-            model, then only it will detect. </span>
-            <br><br>
-        <div>
-        <input id="search">
+<body data-gr-c-s-loaded="true">
+
+
+<!-- desktop header -->
+<header class="desktop-header-3 fixed-top">
+
+    <div class="container">
+	
+        <nav class="navbar navbar-expand-lg navbar-dark">
+           
+            <b class="navbar-brand">Atreyye Thakur</b> 
+
+            <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNavDropdown" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto scrollspy">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#tools" class="nav-link">Tools</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- main layout -->
+<main class="content-3">
+	
+	<!-- section home -->
+	<section id="home" class="home d-flex align-items-center">
+		<div class="container">
+
+			<!-- intro -->
+			<div class="intro">
+				<!-- avatar image -->
+				<img src="me.jpg" style="width: 150px;border-radius: 100px" class="mb-4">
+
+				<!-- info -->
+				<h1 class="mb-2 mt-0">Atreyye Thakur</h1>
+				<span>I'm a <span class="text-rotating morphext"><span class="animated bounceIn">Developer</span></span></span>
+			</div>
+
+			<!-- parallax layers -->
+			<div class="parallax" data-relative-input="true" style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
+
+				<svg width="27" height="29" data-depth="0.3" class="layer p1" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(-7.20601px, 17.2034px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block;"><path d="M21.15625.60099c4.37954 3.67487 6.46544 9.40612 5.47254 15.03526-.9929 5.62915-4.91339 10.30141-10.2846 12.25672-5.37122 1.9553-11.3776.89631-15.75715-2.77856l2.05692-2.45134c3.50315 2.93948 8.3087 3.78663 12.60572 2.22284 4.297-1.5638 7.43381-5.30209 8.22768-9.80537.79387-4.50328-.8749-9.08872-4.37803-12.02821L21.15625.60099z" fill="#FFD15C" fill-rule="evenodd"></path></svg>
+
+				<svg width="26" height="26" data-depth="0.2" class="layer p2" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(-4.80401px, 11.4689px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><path d="M13 3.3541L2.42705 24.5h21.1459L13 3.3541z" stroke="#FF4C60" stroke-width="3" fill="none" fill-rule="evenodd"></path></svg>
+
+				<svg width="30" height="25" data-depth="0.3" class="layer p3" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(-7.20601px, 17.2034px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><path d="M.1436 8.9282C3.00213 3.97706 8.2841.92763 14.00013.92796c5.71605.00032 10.9981 3.04992 13.85641 8 2.8583 4.95007 2.8584 11.0491-.00014 16.00024l-2.77128-1.6c2.28651-3.96036 2.28631-8.84002.00011-12.8002-2.2862-3.96017-6.5124-6.40017-11.08513-6.4-4.57271.00018-8.79872 2.43984-11.08524 6.4002l-2.77128-1.6z" fill="#44D7B6" fill-rule="evenodd"></path></svg>
+
+				<svg width="15" height="23" data-depth="0.6" class="layer p4" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(-14.412px, 34.4068px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><rect transform="rotate(30 9.86603 10.13397)" x="7" width="3" height="25" rx="1.5" fill="#FFD15C" fill-rule="evenodd"></rect></svg>
+
+				<svg width="15" height="23" data-depth="0.2" class="layer p5" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(-4.80401px, 11.4689px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><rect transform="rotate(30 9.86603 10.13397)" x="7" width="3" height="25" rx="1.5" fill="#6C6CE5" fill-rule="evenodd"></rect></svg>
+
+				<svg width="49" height="17" data-depth="0.5" class="layer p6" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(-12.01px, 28.6724px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><g fill="#FF4C60" fill-rule="evenodd"><path d="M.5 16.5c0-5.71709 2.3825-10.99895 6.25-13.8567 3.8675-2.85774 8.6325-2.85774 12.5 0C23.1175 5.50106 25.5 10.78292 25.5 16.5H23c0-4.57303-1.90625-8.79884-5-11.08535-3.09375-2.28652-6.90625-2.28652-10 0C4.90625 7.70116 3 11.92697 3 16.5H.5z"></path><path d="M23.5 16.5c0-5.71709 2.3825-10.99895 6.25-13.8567 3.8675-2.85774 8.6325-2.85774 12.5 0C46.1175 5.50106 48.5 10.78292 48.5 16.5H46c0-4.57303-1.90625-8.79884-5-11.08535-3.09375-2.28652-6.90625-2.28652-10 0-3.09375 2.28651-5 6.51232-5 11.08535h-2.5z"></path></g></svg>
+
+				<svg width="26" height="26" data-depth="0.4" class="layer p7" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(-9.60801px, 22.9379px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><path d="M13 22.6459L2.42705 1.5h21.1459L13 22.6459z" stroke="#FFD15C" stroke-width="3" fill="none" fill-rule="evenodd"></path></svg>
+
+				<svg width="19" height="21" data-depth="0.3" class="layer p8" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(-7.20601px, 17.2034px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><rect transform="rotate(-40 6.25252 10.12626)" x="7" width="3" height="25" rx="1.5" fill="#6C6CE5" fill-rule="evenodd"></rect></svg>
+
+				<svg width="30" height="25" data-depth="0.3" data-depth-y="-1.30" class="layer p9" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(-7.20601px, 17.2034px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><path d="M29.8564 16.0718c-2.85854 4.95114-8.1405 8.00057-13.85654 8.00024-5.71605-.00032-10.9981-3.04992-13.85641-8-2.8583-4.95007-2.8584-11.0491.00014-16.00024l2.77128 1.6c-2.28651 3.96036-2.28631 8.84002-.00011 12.8002 2.2862 3.96017 6.5124 6.40017 11.08513 6.4 4.57271-.00018 8.79872-2.43984 11.08524-6.4002l2.77128 1.6z" fill="#6C6CE5" fill-rule="evenodd"></path></svg>
+
+				<svg width="47" height="29" data-depth="0.2" class="layer p10" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(-4.80401px, 11.4689px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><g fill="#44D7B6" fill-rule="evenodd"><path d="M46.78878 17.19094c-1.95535 5.3723-6.00068 9.52077-10.61234 10.8834-4.61167 1.36265-9.0893-.26708-11.74616-4.27524-2.65686-4.00817-3.08917-9.78636-1.13381-15.15866l2.34923.85505c-1.56407 4.29724-1.2181 8.92018.90705 12.12693 2.12514 3.20674 5.70772 4.5107 9.39692 3.4202 3.68921-1.0905 6.92581-4.40949 8.48988-8.70673l2.34923.85505z"></path><path d="M25.17585 9.32448c-1.95535 5.3723-6.00068 9.52077-10.61234 10.8834-4.61167 1.36264-9.0893-.26708-11.74616-4.27525C.16049 11.92447-.27182 6.14628 1.68354.77398l2.34923.85505c-1.56407 4.29724-1.2181 8.92018.90705 12.12692 2.12514 3.20675 5.70772 4.5107 9.39692 3.4202 3.68921-1.0905 6.92581-4.40948 8.48988-8.70672l2.34923.85505z"></path></g></svg>
+
+				<svg width="33" height="20" data-depth="0.5" class="layer p11" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(-12.01px, 28.6724px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><path d="M32.36774.34317c.99276 5.63023-1.09332 11.3614-5.47227 15.03536-4.37895 3.67396-10.3855 4.73307-15.75693 2.77837C5.76711 16.2022 1.84665 11.53014.8539 5.8999l3.15139-.55567c.7941 4.50356 3.93083 8.24147 8.22772 9.8056 4.29688 1.56413 9.10275.71673 12.60554-2.2227C28.34133 9.98771 30.01045 5.4024 29.21635.89884l3.15139-.55567z" fill="#FFD15C" fill-rule="evenodd"></path></svg>
+
+			</div>
+		</div>
+		
+	</section>
+
+	<!-- section about -->
+	<section id="about">
+
+		<div class="container">
+			
+			<!-- section title -->
+			<h2 class="section-title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">About Me</h2>
+
+			<div class="spacer" data-height="60" style="height: 60px;"></div>
+			
+			<div class="row">
+
+				<div class="col-md-3">
+					<div class="text-center text-md-left">
+						<!-- avatar image -->
+						<img src="me.jpg" style="width: 150px;border-radius: 100px" class="mb-4">
+					</div>
+					<div class="spacer d-md-none d-lg-none" data-height="30" style="height: 30px;"></div>
+				</div>
+
+				<div class="col-md-9 triangle-left-md triangle-top-sm">
+					<div class="rounded bg-white shadow-dark padding-30">
+						<div class="row">
+							<div class="col-md-6">
+								<!-- about text -->
+								<p>I am Atreyye Thakur, a web developer from Bangalore, India. I have rich experience in building and customizing websites and app, also I am good at logo designing. Recently I have started learning machine learning and have created great apps which are mention below</p>
+
+								<div class="spacer d-md-none d-lg-none" data-height="30" style="height: 30px;"></div>
+							</div>
+							<div class="col-md-6">
+								<!-- skill item -->
+								<div class="skill-item">
+									<div class="skill-info clearfix">
+										<h4 class="float-left mb-3 mt-0">Web Development</h4>
+										<span class="float-right">90%</span>
+									</div>
+									<div class="progress">
+										<div class="progress-bar data-background" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90" data-color="#FFD15C" style="background-color: orange; width: 90%;">
+										</div>
+									</div>
+									<div class="spacer" data-height="20" style="height: 20px;"></div>
+								</div>
+
+								<!-- skill item -->
+								<div class="skill-item">
+									<div class="skill-info clearfix">
+										<h4 class="float-left mb-3 mt-0">UI/UX design</h4>
+										<span class="float-right">90%</span>
+									</div>
+									<div class="progress">
+										<div class="progress-bar data-background" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="89" data-color="#FF4C60" style="background-color: red; width: 89%;">
+										</div>
+									</div>
+									<div class="spacer" data-height="20" style="height: 20px;"></div>
+								</div>
+
+								<!-- skill item -->
+								<div class="skill-item">
+									<div class="skill-info clearfix">
+										<h4 class="float-left mb-3 mt-0">Java Script</h4>
+										<span class="float-right">97%</span>
+									</div>
+									<div class="progress">
+										<div class="progress-bar data-background" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="97" data-color="#6C6CE5" style="background-color: purple; width: 97%;">
+										</div>
+									</div>
+                				  <div class="spacer" data-height="20" style="height: 20px;"></div>
+								</div>
+
+				                <!-- skill item -->
+				                <div class="skill-item">
+				                  <div class="skill-info clearfix">
+				                    <h4 class="float-left mb-3 mt-0">AI Machine Learning</h4>
+				                    <span class="float-right">92%</span>
+				                  </div>
+				                  <div class="progress">
+				                    <div class="progress-bar data-background" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="92" data-color="#6C6CE5" style="background-color: green; width: 92%;">
+				                    </div>
+				                  </div>
+				                </div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- row end -->
+
+			<div class="spacer" data-height="70" style="height: 70px;"></div>
+			
+			<div class="row">
+				
+				<div class="col-md-3 col-sm-6">
+					<!-- fact item -->
+					<div class="fact-item">
+						<div class="details">
+							<h3 class="mb-0 mt-0 number"><em class="count">288</em></h3>
+							<p class="mb-0">Projects completed</p>
+						</div>
+					</div>
+					<div class="spacer d-md-none d-lg-none" data-height="30" style="height: 30px;"></div>
+				</div>
+
+				<div class="col-md-3 col-sm-6">
+					<!-- fact item -->
+					<div class="fact-item">
+						<div class="details">
+							<h3 class="mb-0 mt-0 number"><em class="count">192</em></h3>
+							<p class="mb-0">Number of hours spend on HTML</p>
+						</div>
+					</div>
+					<div class="spacer d-md-none d-lg-none" data-height="30" style="height: 30px;"></div>
+				</div>
+
+				<div class="col-md-3 col-sm-6">
+					<!-- fact item -->
+					<div class="fact-item">
+						<div class="details">
+							<h3 class="mb-0 mt-0 number"><em class="count">292</em></h3>
+							<p class="mb-0">Number of hours spend on JAVASCRIPT</p>
+						</div>
+					</div>
+					<div class="spacer d-md-none d-lg-none" data-height="30" style="height: 30px;"></div>
+				</div>
+
+				<div class="col-md-3 col-sm-6">
+					<!-- fact item -->
+					<div class="fact-item">
+						<div class="details">
+							<h3 class="mb-0 mt-0 number"><em class="count">92</em></h3>
+							<p class="mb-0">Number of hours spend on AI MACHINE LEARNING</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		
+	</section>
+	
+  <!-- section projects -->
+  <section id="projects">
+
+    <div class="container">
+      
+      <!-- section title -->
+      <h2 class="section-title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">My Projects</h2>
+
+      <div class="spacer" data-height="60" style="height: 60px;"></div>
+      
+      <div class="row blog-wrapper">
+        
+        <!-- projects item -->
+        <div class="col-md-4">
+          <div class="blog-item rounded bg-white shadow-dark wow fadeIn" data-wow-delay="200ms" style="visibility: visible; animation-delay: 200ms; animation-name: fadeIn;">
+            <div class="thumb">
+              <a href="https://mahdihat791.github.io/AI-Mario-Game/">
+                <img src="mario.jpeg" alt="blog-title">
+              </a>
+            </div>
+            <div class="details">
+              <h4 class="my-0 title">
+              	<a href="https://mahdihat791.github.io/AI-Mario-Game/">AI Mario Game</a>
+              </h4>
+              <ul class="list-inline meta mb-0 mt-2">
+                <li class="list-inline-item">05 June, 2023</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <br><br>
-        <button id="start" class="btn btn-success">Start</button>
-        <br><br>
-        <span><h3 id="number_of_objects" class="btn btn-warning"></h3>
-<h3 id="status" class="btn btn-danger"></h3>
-</span>
-    </center>
+        <!-- end project item -->
+		<div class="col-md-4">
+			<div class="blog-item rounded bg-white shadow-dark wow fadeIn" data-wow-delay="200ms" style="visibility: visible; animation-delay: 200ms; animation-name: fadeIn;">
+			  <div class="thumb">
+				<a href="https://mahdihat791.github.io/AI-Mario-Game/">
+				  <img src="https://play-lh.googleusercontent.com/Bf4yxwhTmhc2qrvL_WvSkwEdV6x35rxWaslwPvwsLiq_98RhWJ3iSWRwpzJNLCtOxw=w526-h296-rw" alt="blog-title">
+				</a>
+			  </div>
+			  <div class="details">
+				<h4 class="my-0 title">
+					<a href="https://atreyye12.github.io/Ping-Pong-/">AI Ping Pong</a>
+				</h4>
+				<ul class="list-inline meta mb-0 mt-2">
+				  <li class="list-inline-item">05 June 2023</li>
+				</ul>
+			  </div>
+			</div>
+		  </div>
+      </div>
+
+    </div>
+
+  </section>
+  
+    <!-- section tools -->
+  <section id="tools">
+
+    <div class="container">
+      
+      <!-- section title -->
+      <h2 class="section-title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Tools And Language</h2>
+
+      <div class="spacer" data-height="60" style="height: 60px;"></div>
+      
+      <!-- portolio wrapper -->
+      <div class="row portfolio-wrapper" style="position: relative; height: 595.062px;">
+        
+        <!-- tool item -->
+        <div class="col-md-4 col-sm-6 grid-item art" data-toggle="modal" data-target="#myModal" style="position: absolute; left: 0%; top: 0px;">
+            <div class="portfolio-item rounded shadow-dark">
+              <div class="details">
+                <h4 class="title">ml5.js</h4>
+              </div>
+              <div class="thumb">
+                <img src="ml5.png" alt="Portfolio-title">
+                <div class="mask"></div>
+              </div>
+            </div>
+        </div>
+		<div class="col-md-4 col-sm-6 grid-item art" data-toggle="modal" data-target="#myHTML" style="position: absolute; left: 0%; top: 0px;">
+            <div class="portfolio-item rounded shadow-dark">
+              <div class="details">
+                <h4 class="title">HTML</h4>
+              </div>
+              <div class="thumb">
+                <img src="https://play-lh.googleusercontent.com/RslBy1o2NEBYUdRjQtUqLbN-ZM2hpks1mHPMiHMrpAuLqxeBPcFSAjo65nQHbTA53YYn" alt="Portfolio-title">
+                <div class="mask"></div>
+              </div>
+            </div>
+        </div>
+        <!-- end tool item -->
+
+      </div>
+    </div>
+
+  </section>
+	
+
+  <!-- section services -->
+  <section id="services">
+
+    <div class="container">
+      
+      <!-- section title -->
+      <h2 class="section-title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Services</h2>
+
+      <div class="spacer" data-height="60" style="height: 60px;"></div>
+      
+      <div class="row">
+
+        <!-- service box -->
+        <div class="col-md-4">
+          <div class="service-box rounded data-background padding-30 text-center shadow-yellow" data-color="#F9D74C" style="background-color: rgb(249, 215, 76);">
+            <img src="svg/service-2.svg">
+            <h3 class="mb-3 mt-0">Web Development</h3>
+            <p class="mb-0">I have rich and sharp proficiency and extensive experience in creating responsive and professional websites for all types of businesses</p>
+          </div>
+          <div class="spacer d-md-none d-lg-none" data-height="30" style="height: 30px;"></div>
+        </div>
+        <!-- end service box -->
+
+      </div>
+
+    </div>
+    
+  </section>
+		
+	<!-- section prices -->
+
+
+
+  <!-- section hobbies -->
+  <section>
+
+    <div class="container">
+      
+      <!-- section title -->
+      <h2 class="section-title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Hobbies</h2>
+
+      <div class="spacer" data-height="60" style="height: 60px;"></div>
+      
+      <div class="row">
+
+        <div class="col-md-6">
+          
+          <!-- hobbies wrapper -->
+          <div class=" edu bg-white rounded shadow-dark padding-30 overflow-hidden">
+
+            <!-- hobbies item -->
+            <div class="timeline-container wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+              <div class="content">
+                <img src="swimming.png" style="width:40px;">
+                <h3 class="title" style="display: inline-block;">Swimming</h3>
+                <hr>
+              </div>
+            </div>
+            <!-- end hobbies item -->
+
+
+            <span class="line"></span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    
+  </section>
+	
+	<!-- section funfacts -->
+	<section>
+
+		<div class="container">
+			
+			<!-- section title -->
+			<h2 class="section-title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Things I love the most</h2>
+
+			<div class="spacer" data-height="60" style="height: 60px;"></div>
+			
+			<!-- funfacts wrapper -->
+			<div class="testimonials-wrapper slick-initialized slick-slider slick-dotted" role="toolbar">
+				
+				<!-- funfacts item -->
+			<div aria-live="polite" class="slick-list draggable"><div class="slick-track" role="listbox" style="opacity: 1; width: 2800px; transform: translate3d(-700px, 0px, 0px);">
+
+        	 <div class="testimonial-item text-center mx-auto slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 700px;">
+  			</div>
+
+      		 <div class="testimonial-item text-center mx-auto slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide00" style="width: 700px;">
+				<div class="mb-3 mx-auto">
+
+					<img style="border-radius: 20px;" class="img-responsive" src="data:image/jpeg;base64,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">						
+				</div>
+
+					<h4 class="mt-3 mb-0">Disney land</h4>
+					
+					<div class="bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
+						<p class="mb-0">I love Disney.It is very fun and enjoying over there I went there this year.</p>
+					</div>
+				</div>
+
+      </div></div>
+				
+				
+
+			</div>
+
+
+		</div>
+
+	</section>
+	
+  
+	<!-- section contact -->
+	<section id="contact" style="background: #353353;padding: 15px;">
+
+		<div class="container">
+			
+			<!-- section title -->
+			<h2 class="section-title wow fadeInUp" style="margin-left:0px;color: white;visibility: visible; animation-name: fadeInUp;">Get In Touch</h2>
+
+			
+			<div class="row">
+				
+				<div class="col-md-8">
+
+					<h3 class="wow fadeInUp" style="color: white;visibility: visible; animation-name: fadeInUp;">Atreyye Thakur</h3>
+				    <hr style="border: 0.5px solid white;">
+					<img src="me.jpg" style="display: inline-block; width: 100px;border-radius: 100px" class="mb-4">
+            		<p style="margin: 5px; color: white; display: inline-block;">Please free feel to contact me on my social handles</p>
+
+				</div>
+
+				<div class="col-md-4">
+
+  				    <h3 class="wow fadeInUp" style="color: white;visibility: visible; animation-name: fadeInUp;">FOLLOW ME</h3>
+   					<hr style="border: 0.5px solid white;">
+      				<p style="color: white;">Let us be social</p>
+
+				    <a href="#">
+				      <img src="instagram.png" style="width: 40px;margin: 5px">
+				    </a>
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+
+	
+</main>
+
+<!-- Go to top button -->
+<a href="javascript:" id="return-to-top" style="display: none;">
+  <img src="go_to_top.png">
+</a>
+
+<!-- modal -->
+<div id="myModal" class="modal fade ">
+    <div class="modal-dialog" >
+          <!-- Modal content-->
+        <div class="modal-content">
+      
+            <button class="close" data-dismiss="modal" style="text-align: right;padding: 10px;">&times;</button>
+            <hr>
+            <div class="modal-body">
+              <p>Welcome to the ml5 project! Developing ml5 is not just about developing machine learning software, it is about making machine learning approachable for a broad audience of artists, creative coders, and students. The library provides access to machine learning algorithms and models in the browser, building on top of TensorFlow.js with no other external dependencies.The library is supported by code examples, tutorials, and sample datasets with an emphasis on ethical computing. Bias in data, stereotypical harms, and responsible crowdsourcing are part of the documentation around data collection and usage. We're building friendly machine learning for the web - we're glad you're here! ml5.js is heavily inspired by Processing and p5.js.</p>
+             </div>
+
+        </div>
+    </div>
+ </div>
+ <div id="myHTML" class="modal fade ">
+    <div class="modal-dialog" >
+          <!-- Modal content-->
+        <div class="modal-content">
+      
+            <button class="close" data-dismiss="modal" style="text-align: right;padding: 10px;">&times;</button>
+            <hr>
+            <div class="modal-body">
+              <p>Welcome to the HTML project! The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It is often assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript</p>
+             </div>
+
+        </div>
+    </div>
+ </div>
+ <!-- end modal -->
+
+<!-- SCRIPTS -->
+<script src="js/jquery-1.12.3.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/infinite-scroll.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/validator.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/morphext.min.js"></script>
+<script src="js/parallax.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+
+<script src="js/custom.js"></script>
+
+      
+
+
 </body>
+
 
 </html>
